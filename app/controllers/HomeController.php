@@ -4,13 +4,15 @@
     {
         public function __construct()
         {
-            //$this->userModel = $this->modelo('userModel');
+            $this->HomeModel = $this->modelo('HomeModel');
             
         }
    
         public function index()
         {  
-           $this->vista('index');
+            $datos = $this->HomeModel->EnviarDatos();
+
+            $this->vista('index', $datos);
         }
     }
 ?>

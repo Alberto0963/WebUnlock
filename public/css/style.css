@@ -46,6 +46,16 @@ body {
   content: "";
 }
 
+.colorTextLink
+{
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.colorTextLink:hover
+{
+  color: blue !important;
+}
+
 a {
   color: #09C6AB;
   -webkit-transition: 0.5s;
