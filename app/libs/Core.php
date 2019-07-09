@@ -16,10 +16,10 @@ class Core
 
         if(file_exists('../app/controllers/' .ucwords($url[0]).'.php'))
         {
-            $this->controladorActual = ucwords($url[0]);
+            $this->controladorActual = ucwords($url[3]);
 
             //unset indice
-            unset($url[0]);
+            unset($url[3]);
         }
 
         //requerir el controlador
@@ -27,13 +27,13 @@ class Core
         $this->controladorActual = new $this->controladorActual;
 
         //checar la segunda parte de la url
-        if(isset($url[1]))
+        if(isset($url[4]))
         {
-            if (method_exists($this->controladorActual, $url[1]))
+            if (method_exists($this->controladorActual, $url[4]))
             {
                 //chequear el metodo
-                $this->metodoActual = $url[1];
-                unset($url[1]);
+                $this->metodoActual = $url[4];
+                unset($url[4]);
             }
         }
 
@@ -50,13 +50,13 @@ class Core
 
     public function getUrl()
     {
-       // echo $_GET['url'];
-       if (isset($_GET['url']))
+       //echo $_GET['uri'];
+       if (isset($_GET['uri']))
        {
-            $url = rtrim($_GET['url'], '/');
+            $url = rtrim($_GET['uri'], '/');
             $url = filter_var($url, FILTER_SANITIZE_URL);
             $url = explode('/',$url);
-
+            //var_dump($url);
             return $url;
 
        }

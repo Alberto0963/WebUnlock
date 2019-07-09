@@ -4,7 +4,7 @@
     define('DB_HOST', 'localhost');
     define('DB_USER', 'root');
     define('DB_PASS', 'toor');
-    define('DB_NAME', 'programmers');
+    define('DB_NAME', 'BDCodigosLiberacion');
 
     //Ruta de la aplicacion
     define('RUTA_APP', dirname(dirname(__FILE__)));

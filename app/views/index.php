@@ -1,6 +1,6 @@
 <?php require RUTA_APP.'/views/shared/header.php' ?>
 
-<div class="gtco-section">
+<div class="gtco-section1">
 		<div class="gtco-container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
@@ -11,8 +11,17 @@
 			<div class="row">
  
 				<?php 
-
-					foreach ($datos as $cards => $card) 
+					// var_dump($_POST);
+					//var_dump($datos);
+					
+					foreach ($datos['oper'] as $key => $value) {
+						
+						// var_dump($value);
+						// var_dump($value->id);
+						//echo ($value['id'].' '.$value['operadoraname']);
+					 }
+				
+					foreach ($datos['CardServ'] as $cards => $card) 
 					{
 						
 						echo( '<div class="col-lg-4 col-md-4 col-sm-6">
@@ -87,13 +96,13 @@
 		<div class="gtco-container text-center">
 			<div class="display-t">
 				<div class="display-tc">
-					<h1>We have high quality services that you will surely love!</h1>
+					<h1>Nosotros tenemos alta calidad en nuestros servicios</h1>
 				</div>	
 			</div>
 		</div>
 	</div>
 
-	<div id="gtco-counter" class="gtco-section">
+	<!-- <div id="gtco-counter" class="gtco-section">
 		<div class="gtco-container">
 
 			<div class="row">
@@ -134,34 +143,6 @@
 					
 			</div>
 		</div>
-	</div>
-
-	
-
-	<div id="gtco-subscribe">
-		<div class="gtco-container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<h2>Subscribe</h2>
-					<p>Be the first to know about the new templates.</p>
-				</div>
-			</div>
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2">
-					<form class="form-inline">
-						<div class="col-md-6 col-sm-6">
-							<div class="form-group">
-								<label for="email" class="sr-only">Email</label>
-								<input type="email" class="form-control" id="email" placeholder="Your Email">
-							</div>
-						</div>
-						<div class="col-md-6 col-sm-6">
-							<button type="submit" class="btn btn-default btn-block">Subscribe</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
+	</div> -->
 
 	<?php require RUTA_APP.'/views/shared/footer.php' ?>

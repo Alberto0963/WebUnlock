@@ -62,15 +62,7 @@
 	
 	<!-- <div class="page-inner"> -->
 	<nav class="gtco-nav" role="navigation">
-		<div class="gtco-container">
-			
-			<div class="row">
-				<div class="col-sm-4 col-xs-12">
-					<div id="gtco-logo"><a href="index.html">Códigos de Liberación México </a></div>
-				</div>
-				<div class="col-xs-8 text-right menu-1">
-					<ul>
-						<li><a href="destination.html"></a></li>
+git
 						<li class="has-dropdown">
 							<a href="#">Otros Servicios</a>
 							<ul class="dropdown">
@@ -78,7 +70,7 @@
 								<li><a href="#">Liberaciones Equipos EE.UU</a></li>
 							</ul>
 						</li>
-						<li><a href="pricing.html">Precios</a></li>
+						<li><a href="<?php echo RUTA_URL.'/HomeController/enviarVistaPrecios'; ?>">Precios</a></li>
 						<li><a href="contact.html">Contacto</a></li>
 					</ul>	
 				</div>
@@ -105,56 +97,13 @@
 									<div class="tab-content">
 										<div class="tab-content-inner active" data-content="signup">
 											<h3>Solicitar Servicio</h3>
-											<form action="#">
-												<div class="row form-group">
-													<div class="col-md-12">
-														<label for="fullname">Nombre Completo</label>
-														<input type="text" id="fullname" class="form-control">
-													</div>
-												</div>
-												<div class="row form-group">
-													<div class="col-md-12">
-														<label for="servicio">Servicio</label>
-														<select name="#" id="servicio" class="form-control">
-															<option value="">Liberacíon</option>
-															<option value="">Limpieza de IMEI</option>
-														</select>
-													</div>
-												</div>
-												<div class="row form-group" id="divOperadora">
-													<div class="col-md-12">
-														<label for="operadora">Operadora</label>
-														<select name="#" id="operadora" class="form-control">
-															<option value="">Movistar</option>
-															<option value="">Telcel</option>
-															<option value="">AT&T</option>
-														</select>
-													</div>
-												</div>
-												
-												<div class="row form-group">
-													<div class="col-md-12">
-														<label for="imei">IMEI</label>
-														<input type="number" id="imei" class="form-control">
-													</div>
-												</div>
-
-												<div class="row form-group">
-													<div class="col-md-12">
-														<input type="submit" class="btn btn-primary btn-block" value="Submit">
-													</div>
-												</div>
-											</form>	
-										</div>
-
-										
+											<?php require RUTA_APP.'/views/shared/formsolicitud.php' ?>
+										</div>										
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-							
-					
+					</div>												
 				</div>
 			</div>
 		</div>

@@ -742,10 +742,16 @@ form label {
 #gtco-services,
 #gtco-subscribe,
 #gtco-footer,
+.gtco-section1 {
+  padding: 7em 0;
+  clear: both;
+  position: relative;
+}
 .gtco-section {
   padding: 7em 0;
   clear: both;
   position: relative;
+  background:#0098EF;
 }
 @media screen and (max-width: 768px) {
   #gtco-features,
@@ -766,6 +772,7 @@ form label {
 #gtco-footer.border-bottom,
 .gtco-section.border-bottom {
   border-bottom: 1px solid #e6e6e6;
+  
 }
 
 #gtco-features {

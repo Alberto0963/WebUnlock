@@ -1,7 +1,7 @@
 <?php
 
     //Clase para conectarse a la base de datos
-    class BD
+    class Db
     {
         private $host = DB_HOST;
         private $usuario = DB_USER;
