@@ -37,33 +37,72 @@
 
         public function enviarSolicitud()
         {
-            //echo 'hjkhkjhkhkj';
-            //var_dump($_POST);
-            //echo('jhjkhkhj'.$datos->nombre);
             if($_SERVER['REQUEST_METHOD'] == "POST")
             {
-                var_dump($_POST);
+                
+                $servicio = $this->HomeModel->ObtenerServicio($_POST['servicio']);
+                $operadora = $this->HomeModel->ObtenerOperadoraMexico($_POST['operadora']);
+                $precio = $this->HomeModel->ObtenerPecioOperadoraMexico($operadora->operadoraname,$servicio->id)->precioClient;
+                // var_dump($servicio);
+                // var_dump($operadora);
+                // var_dump($precio);
+
                 $datos = 
                 [
                     'nombre' =>trim($_POST['nombre']),
                     'mail' =>trim($_POST['mail']),
-                    'servicio' =>trim($_POST['servicio']),
-                    'operadora' =>trim($_POST['operadora']),
+                    'servicio' =>trim($servicio->name),
+                    'operadora' =>trim($operadora->operadoraname),
                     'imeitext' =>trim($_POST['imeitext']),
-                    'costo' =>'300'
+                    'costo' => $precio
                 ];
-                $email = $this->HomeModel->enviarCorreo($datos['mail'],
-                $datos['nombre'], $datos['costo'],$datos['imeitext'],
-                $datos['servicio'],$datos['operadora']);
 
-               if($email)
+                $idoperadora = trim($operadora->id);
+                $idServicio = trim($servicio->id);
+                
+                
+
+                if((count(array_filter($datos)) == count(($datos))))
                 {
-                    redireccionar('/HomeController/index');
+                    // if($email)
+                    //     {
+
+                    if($this->HomeModel->GuardarSolucitudLiberacionMexico($idServicio,$datos['nombre'],$datos['mail'],$idoperadora,$datos['imeitext']))
+                    {
+                        $email = $this->HomeModel->enviarCorreo($datos['mail'],
+                            $datos['nombre'], $datos['costo'],$datos['imeitext'],
+                            $datos['servicio'],$datos['operadora'],$idServicio,$idoperadora);
+
+                        if($email)
+                        {
+                            redireccionar('/HomeController/index');
+                        }
+                        else 
+                        {
+                            die('algo salio mal con el correo');
+                        }
+                    }
+                    else 
+                    {
+                        die('algo salio mal al guardar en la base de datos');
+                    }
+                            
+
                 }
-                else {
-                    echo $email;
+                {
+                    die('Algo salio mal');
                 }
             }
+        }
+
+        public function generarCompra()
+        {
+
+        }
+
+        public function EnviarCorreo()
+        {
+
         }
     }
 ?>

@@ -91,13 +91,17 @@
 	<!-- Main -->
 	<script src="<?php echo RUTA_URL;?>/js/main.js"></script>
 	<script type="text/javascript">
+
 		$(document).on('change', '#servicio', function(event) 
 		{
 			//var valor = $('servicio').val();
 			var valor = $("#servicio option:selected").text();
 			console.log($("#servicio option:selected").text());
-			if(valor == 'Limpieza de IMEI ')
+			console.log($("#operadora").val());
+			if(valor == 'Limpieza de IMEI ' || valor == 'Remover Icloud ')
 			{
+				$("#operadora").val('3');
+				console.log($("#operadora").val());
      			$('#divOperadora').hide();
 			}
 			else
