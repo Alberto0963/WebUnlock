@@ -90,7 +90,7 @@
 
                 }
                 {
-                    die('Algo salio mal');
+                    //die('Algo salio mal');
                 }
             }
         }

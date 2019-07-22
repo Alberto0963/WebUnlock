@@ -1,45 +1,35 @@
 <?php require RUTA_APP.'/views/shared/header.php' ?>
 
 <div class="gtco-section1">
-		<div class="gtco-container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<h2>Servicios mas frecuentes</h2>
-					<p>Servicios realizados con mayor frecuencia por nuestros clientes</p>
-				</div>
+	<div class="gtco-container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+				<h2>Ultimos Servicios Realizados</h2>
+				<p>Lista de los servicios mas recientes</p>
 			</div>
-			<div class="row">
- 
-				<?php 
-					// var_dump($_POST);
-					//var_dump($datos);
-					
-					foreach ($datos['oper'] as $key => $value) {
-						
-						// var_dump($value);
-						// var_dump($value->id);
-						//echo ($value['id'].' '.$value['operadoraname']);
-					 }
-				
-					foreach ($datos['CardServ'] as $cards => $card) 
-					{
-						
-						echo( '<div class="col-lg-4 col-md-4 col-sm-6">
-									<a href="images/img_1.jpg" class="fh5co-card-item image-popup">
-										<figure>
-											<div class="overlay"><i class="ti-plus"></i></div>
-											<img src="'.$card['imagen'].'" alt="Image" class="img-responsive">
-										</figure>
-										<div class="fh5co-text">
-											<h2>'.$card['service'].'</h2>
-											<p>'.$card['descripcion'].'</p>
-											<p><span class="btn btn-primary">Schedule a Trip</span></p>
-										</div>
-									</a>
-								</div>');
-					}
-				?>
-			</div>
+		</div>
+		<div class="row">
+		<?php 	
+			var_dump($datos['CardServ']);
+		foreach ($datos['CardServ'] as $cards => $card) 
+		{
+			
+			echo( '<div class="col-lg-4 col-md-4 col-sm-6">
+						<a class="fh5co-card-item ">
+							<figure>
+								<div class="overlay"><i></i></div>
+								<img src="'. RUTA_URL .'/public/images/pagina/'.$card->imageName.'" alt="Image" class="img-responsive">
+							</figure>
+							<div class="fh5co-text">
+								<h2>'.$card->name.' '.$card->operadoraname.' '.$card->pais.'</h2>
+								<p>'.$card->descripcion.'</p>
+								<p><span class="btn btn-primary">Schedule a Trip</span></p>
+							</div>
+						</a>
+					</div>
+					');
+		}
+		?>
 		</div>
 	</div>
 	
@@ -102,47 +92,4 @@
 		</div>
 	</div>
 
-	<!-- <div id="gtco-counter" class="gtco-section">
-		<div class="gtco-container">
-
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center gtco-heading animate-box">
-					<h2>Our Success</h2>
-					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-				</div>
-			</div>
-
-			<div class="row">
-				
-				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
-					<div class="feature-center">
-						<span class="counter js-counter" data-from="0" data-to="196" data-speed="5000" data-refresh-interval="50">1</span>
-						<span class="counter-label">Destination</span>
-
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
-					<div class="feature-center">
-						<span class="counter js-counter" data-from="0" data-to="97" data-speed="5000" data-refresh-interval="50">1</span>
-						<span class="counter-label">Hotels</span>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
-					<div class="feature-center">
-						<span class="counter js-counter" data-from="0" data-to="12402" data-speed="5000" data-refresh-interval="50">1</span>
-						<span class="counter-label">Travelers</span>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
-					<div class="feature-center">
-						<span class="counter js-counter" data-from="0" data-to="12202" data-speed="5000" data-refresh-interval="50">1</span>
-						<span class="counter-label">Happy Customer</span>
-
-					</div>
-				</div>
-					
-			</div>
-		</div>
-	</div> -->
-
-	<?php require RUTA_APP.'/views/shared/footer.php' ?>
+<?php require RUTA_APP.'/views/shared/footer.php' ?>

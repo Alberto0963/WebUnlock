@@ -86,11 +86,30 @@
 	
 	<!-- Datepicker -->
 	<script src="<?php echo RUTA_URL;?>/js/bootstrap-datepicker.min.js"></script>
-	
+	<script type="text/javascript" src="<?php echo RUTA_URL;?>/js/jquery.validate.js"></script>
 
 	<!-- Main -->
 	<script src="<?php echo RUTA_URL;?>/js/main.js"></script>
 	<script type="text/javascript">
+
+       function validarFormulario(){
+		  $("#form1").validate(
+			  {
+				  messages:{
+					  nombre:{
+						required: "Por favor ingresa tu nombre",
+					  },
+					  mail:{
+						required: "Por favor ingresa un correo electronico",
+						email: "Por favor ingresa un correo electronico valido"
+					  }
+				  }
+			  }
+		  );
+       }
+       $(document).ready(function(){
+          validarFormulario();
+       });
 
 		$(document).on('change', '#servicio', function(event) 
 		{

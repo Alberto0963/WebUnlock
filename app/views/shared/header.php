@@ -52,6 +52,7 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 	<script src="https://use.fontawesome.com/2a5ea9150b.js"></script>
+
 	</head>
 	<body>
 		
@@ -59,10 +60,16 @@
 	
 	<div id="page">
 
-	
 	<!-- <div class="page-inner"> -->
 	<nav class="gtco-nav" role="navigation">
-git
+	<div class="gtco-container">
+			
+			<div class="row">
+				<div class="col-sm-4 col-xs-12">
+					<div id="gtco-logo"><a href="index.html">WebUnlockMX</a></div>
+				</div>
+				<div class="col-xs-8 text-right menu-1">
+					<ul>	
 						<li class="has-dropdown">
 							<a href="#">Otros Servicios</a>
 							<ul class="dropdown">
