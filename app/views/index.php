@@ -10,7 +10,7 @@
 		</div>
 		<div class="row">
 		<?php 	
-			var_dump($datos['CardServ']);
+		
 		foreach ($datos['CardServ'] as $cards => $card) 
 		{
 			
