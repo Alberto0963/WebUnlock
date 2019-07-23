@@ -23,7 +23,6 @@
 							<div class="fh5co-text">
 								<h2>'.$card->name.' '.$card->operadoraname.' '.$card->pais.'</h2>
 								<p>'.$card->descripcion.'</p>
-								<p><span class="btn btn-primary">Schedule a Trip</span></p>
 							</div>
 						</a>
 					</div>
