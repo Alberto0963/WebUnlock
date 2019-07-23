@@ -22,7 +22,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 	
-	
+	<link rel="icon" type="image/ico" href="<?php echo RUTA_URL;?>/images/icono.ico" />
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="<?php echo RUTA_URL;?>/css/animate.css">
 	<!-- Icomoon Icon Fonts-->
