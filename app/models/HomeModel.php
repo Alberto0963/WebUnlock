@@ -54,7 +54,7 @@
                 $hora->format('d-m-Y  G:i a');
                 
                     // Pear Mail Library
-                $from = 'Mail';
+                $from = 'WebUnlock';
                 $to = $destino;
                 $subject = $servicio." ".$operadora;
                 $body = "
@@ -94,8 +94,8 @@
                         'host' => 'ssl://smtp.gmail.com',
                         'port' => '465',
                         'auth' => true,
-                        'username' => 'gallegos.h.alberto@gmail.com',
-                        'password' => 'ksncnzvcssnwfgve'
+                        'username' => 'webunlockmx@gmail.com',
+                        'password' => 'taykpztlpcjqaasx'
                     ));
 
                 $mail = $smtp->send($to, $headers, $body);

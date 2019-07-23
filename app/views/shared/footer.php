@@ -31,7 +31,7 @@
 						<h3>Contacto</h3>
 						<ul class="gtco-quick-contact">
 							<li><a href="https://wa.me/528711726623"><i class="icon-phone"></i> +52 871-172-6623</a></li>
-							<li><a href="#"><i class="icon-mail2"></i> info@freehtml5.co</a></li>
+							<li><a href="#"><i class="icon-mail2"></i>webunlockmx@gmail.com</a></li>
 							<li><a href="http://m.me/CodigoLiberacionViaIMEI"><i class="icon-chat"></i> Chat</a></li>
 						</ul>
 					</div>
@@ -42,7 +42,7 @@
 				<div class="col-md-12">
 					<p class="pull-left">
 						<small class="block">&copy; <?php echo(date('Y')); ?> WebUnlockMexico. All Rights Reserved.</small> 
-						<small class="block">Designed by <a href="https://freehtml5.co/" target="_blank">WebUnlockMexico</a></small>
+						<small class="block">Designed by <a href="https://www.webunlock.ml/" target="_blank">WebUnlockMexico</a></small>
 					</p>
 					<p class="pull-right">
 						<ul class="gtco-social-icons pull-right">
