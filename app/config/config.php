@@ -10,7 +10,7 @@
     define('RUTA_APP', dirname(dirname(__FILE__)));
 
     //Ruta url ejemplo http://www.edcursophp.local
-    define('RUTA_URL', 'http://webunlock.ml');
+    define('RUTA_URL', 'http://www.webunlock.ml');
 
     define('NOMBRESITIO', '_NOMBRE_SITIO');
 ?>
