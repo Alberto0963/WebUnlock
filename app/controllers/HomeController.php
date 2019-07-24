@@ -75,7 +75,7 @@
 
                         if($email)
                         {
-                            redireccionar('/HomeController/index');
+                            redireccionar('');
                         }
                         else 
                         {
