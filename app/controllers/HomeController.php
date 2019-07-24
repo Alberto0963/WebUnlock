@@ -75,7 +75,7 @@
 
                         if($email)
                         {
-                            redireccionar('');
+                            redireccionar(' ');
                         }
                         else 
                         {
@@ -90,7 +90,7 @@
 
                 }
                 {
-                    //die('Algo salio mal');
+                    die('Algo salio mal');
                 }
             }
         }
